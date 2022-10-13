@@ -6,7 +6,7 @@ public class MegtakaritasiSzamla extends Szamla {
 
     public MegtakaritasiSzamla(Tulajdonos tulajdonos) {
         super(tulajdonos);
-        this.alapKamat = this.kamat;
+        alapKamat = this.kamat;
     }
 
     public double getKamat() {
