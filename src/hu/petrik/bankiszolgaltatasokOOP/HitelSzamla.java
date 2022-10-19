@@ -15,8 +15,8 @@ public class HitelSzamla extends Szamla {
 
     @Override
     public boolean kivesz(int osszeg) {
-        if (this.hitelKeret - osszeg >= 0) {
-            this.hitelKeret -= osszeg;
+        if (this.aktualisEgyenleg - osszeg >= 0 && osszeg <= hitelKeret) {
+            this.aktualisEgyenleg -= osszeg;
             return true;
         } else {
             return false;
