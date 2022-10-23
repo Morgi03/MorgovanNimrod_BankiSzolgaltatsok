@@ -48,6 +48,7 @@ public class Bank {
     public long getOsszhitelkeret() {
         long ossz = 0;
         for (Szamla s : this.szamlaLista) {
+            if(s.getClass().equals(HitelSzamla.class))
                 ossz = ossz + ((HitelSzamla) s).getHitelKeret();
         }
         return ossz;
