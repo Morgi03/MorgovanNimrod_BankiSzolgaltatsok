@@ -33,7 +33,6 @@ public class Bank {
     }
 
 
-
     public Szamla getLegnagyobbEgyenleguSzamla(Tulajdonos tulajdonos) {
         Szamla max = this.szamlaLista.get(0);
         for (Szamla s : this.szamlaLista) {
@@ -48,8 +47,9 @@ public class Bank {
     public long getOsszhitelkeret() {
         long ossz = 0;
         for (Szamla s : this.szamlaLista) {
-            if(s.getClass().equals(HitelSzamla.class))
+            if (s.getClass().equals(HitelSzamla.class)) {
                 ossz = ossz + ((HitelSzamla) s).getHitelKeret();
+            }
         }
         return ossz;
     }
